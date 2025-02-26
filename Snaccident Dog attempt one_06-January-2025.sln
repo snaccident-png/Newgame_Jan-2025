@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35431.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snaccident Dog attempt one_06-January-2025", "Snaccident Dog attempt one_06-January-2025.csproj", "{4DCE65D3-5AF7-4DC6-95AF-4378B218F05A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Snaccident Dog (initial test version)", "..\Snaccident Dog (initial test version)\Snaccident Dog (initial test version).vdproj", "{8AB1ADB2-5009-4582-8846-B856CC4DB52A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Snaccident Dog v1", "..\Snaccident Dog v1\Snaccident Dog v1.vdproj", "{CD749342-20FF-414E-9157-732CA4BAD2AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DCE65D3-5AF7-4DC6-95AF-4378B218F05A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DCE65D3-5AF7-4DC6-95AF-4378B218F05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DCE65D3-5AF7-4DC6-95AF-4378B218F05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DCE65D3-5AF7-4DC6-95AF-4378B218F05A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AB1ADB2-5009-4582-8846-B856CC4DB52A}.Debug|Any CPU.ActiveCfg = Debug
+		{8AB1ADB2-5009-4582-8846-B856CC4DB52A}.Release|Any CPU.ActiveCfg = Release
+		{CD749342-20FF-414E-9157-732CA4BAD2AF}.Debug|Any CPU.ActiveCfg = Debug
+		{CD749342-20FF-414E-9157-732CA4BAD2AF}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7452A78E-7083-4E6A-A3DE-A01258E58DB7}
+	EndGlobalSection
+EndGlobal

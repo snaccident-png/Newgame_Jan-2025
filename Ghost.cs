@@ -25,16 +25,16 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
         // Timestamp in the tutorial video on YouTube: 48:25
 
         // I assume this speed variable sets how slow or fast the enemy sprites will move.
-        int speed = 8;
+        int speed = 12;
 
         // When the enemy sprites go into 'seek' or 'attack' mode, these variables set a slower speed for the enemy sprites. I just imagined the dog sprite being chased by fast-moving enemy sprites hahaha! But I will control myself for now and follow the tutorial video.
-        int xSpeed = 16;
-        int ySpeed = 16;
+        int xSpeed = /*3*/16;
+        int ySpeed = /*3*/16;
 
         // These variables will determine the furthest positions at which the enemy sprites can go vertically and horizontally.
 
         // These variables were completed after following the tutorial video at 55:18 (5:21pm AEDT).
-        int minHeight = 68; 
+        int minHeight = 75 /*68*/; 
         
         // I belatedly realised why the guy in the tutorial video altered some of these values and altered some myself (10:17pm).
         /*
@@ -45,13 +45,21 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
          * values and hey presto things worked out.
          */
 
-        int maxHeight = 693;
+        int maxHeight = 917 /*693*/;
 
-        int minWidth = 63;
-        int maxWidth = 894;
+        int minWidth = 72 /*63*/;
+        int maxWidth = 944 /*894*/;
 
         // Notes for minimum and maximum height values: 135 (min) and 1012 (max).
         // Notes for minimum and maximum width values: 124 (min) and 1288 (max).
+
+
+
+        // Changes to height and width values on Thursday, 23rd January 2025.
+        // Notes for minimum and maximum height values: 135 (min) and 1012 (max).
+        // Notes for minimum and maximum width values: 124 (min) and 1288 (max).
+
+
 
         // This variable will do something. This variable will generate a random number which the game will reduce to zero and then change to a different value. In my own words, int change will cause all of the enemy variables to move in random directions when they enter 'seek' mode... I think?
         int change;
@@ -81,8 +89,8 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
             img.SizeMode = PictureBoxSizeMode.StretchImage;
 
             // Specify how wide or narrow and tall or short the image will be in the game.
-            img.Width = 50;
-            img.Height = 50;
+            img.Width = 75;
+            img.Height = 75;
 
             // Specify where or what x and y are in the game.
             img.Left = x;

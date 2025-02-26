@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
+using System.Threading; // Added on Sunday, 12th January 2025.
+
 namespace Snaccident_Dog_attempt_one_06_January_2025
 {
     public partial class Form1 : Form
@@ -95,7 +97,7 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
                 noRight = noDown = noUp = false;
 
                 goLeft = true;
-                dogSprite.Image = Properties.Resources.dogSprite_09_Jan_2025;
+                dogSprite.Image = Properties.Resources.Dog_sprite_FACE_ONLY_left_side_13_January_2025;
             }
 
             if (e.KeyCode == Keys.Right && !noRight)
@@ -104,7 +106,7 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
                 noLeft = noDown = noUp = false;
 
                 goRight = true;
-                dogSprite.Image = Properties.Resources.dogSprite_09_Jan_2025;
+                dogSprite.Image = Properties.Resources.Dog_sprite_FACE_ONLY_right_side_13_January_2025;
             }
 
             if (e.KeyCode == Keys.Up && !noUp)
@@ -113,7 +115,7 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
                 noRight = noDown = noLeft = false;
 
                 goUp = true;
-                dogSprite.Image = Properties.Resources.dogSprite_09_Jan_2025;
+                dogSprite.Image = Properties.Resources.Dog_sprite_FACE_ONLY_back_side_13_January_2025;
             }
 
             if (e.KeyCode == Keys.Down && !noDown)
@@ -122,11 +124,11 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
                 noRight = noLeft = noUp = false;
 
                 goDown = true;
-                dogSprite.Image = Properties.Resources.dogSprite_09_Jan_2025;
+                dogSprite.Image = Properties.Resources.Dog_sprite_face_12_January_2025;
             }
         }
 
-        private void ClickToStart(object sender, EventArgs e)
+        private void ReplayGame(object sender, EventArgs e)
         {
             // Added on Monday, 6th January 2025.
             // Timestamp in the tutorial video on YouTube: 14:05 then 34:04
@@ -168,7 +170,14 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
             // The score displays the number zero as the player will be playing this game for the first time ever or for the first time in their current gameplay session.
             score = 0;
 
-            dogSprite.Image = Properties.Resources.Red_test_sprite_06_January_2025; // Added on 8th January 2025. This code will reset the dog sprite to its starting appearance.
+            //dogSprite.Image = Properties.Resources.Red_test_sprite_06_January_2025; // Added on 8th January 2025. This code will reset the dog sprite to its starting appearance.
+
+            dogSprite.Image = Properties.Resources.Dog_sprite_face_12_January_2025;
+
+
+            dogSprite.Size = new Size(55, 55);
+            dogSprite.Location = new Point(484, 473);
+            // Added on 14th January 2025. This weirdly fixed the bug or issue. If I tried this fix beforehand on 10th January then I must have fudged something or did something wrong.
 
 
             // The enemy sprite code will be added in the near future.
@@ -179,17 +188,197 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
 
             // This code resets the position of the enemy sprites to the starting position when the game ends.
             // The tutorial video said new Point is quite convenient for setting new locations for things.
-            enemyOne.img.Location = new Point(97, 100);
-                enemyTwo.img.Location = new Point(847, 100);
-                enemyThree.img.Location = new Point(97, 640);
-                enemyFour.img.Location = new Point(847, 640);
 
+            // Updated on Thursday, 23rd January 2025.
+            enemyOne.img.Location = new Point(95 /*97*/, 100);
+            enemyTwo.img.Location = new Point(867 /*847*/, 100);
+            enemyThree.img.Location = new Point(95, 840 /*97, 640*/);
+            enemyFour.img.Location = new Point(867, 840 /*847, 640*/);
+
+            // Finally, the game timer starts and the aforementioned functions finally become functional!
+            gameTimer.Start();
+        }
+
+        private void OpenInstructions(object sender, EventArgs e)
+        {
+            gameInstructions.ForeColor = Color.Yellow;
+            instructionsVisual.Show();
+        }
+
+        private void CloseInstructions(object sender, EventArgs e)
+        {
+            gameInstructions.ForeColor = Color.White;
+            instructionsVisual.Hide();
+        }
+
+        private void ClickToStart(object sender, EventArgs e)
+        {
+            // Added on Monday, 6th January 2025.
+            // Timestamp in the tutorial video on YouTube: 14:05 then 34:04
+
+            /* 
+             * The ClickToStart() function allows the player to click on a button that will start and run the game.
+             * 
+             * At some point in the near future, perhaps a function with code typed up to allow the player to replay
+             * the game will be created?
+             */
+
+            /*
+             * I cannot believe how dependent the KeyIsPressed(), PlayerMovements(), and GameTimerEvent() functions are on this function.
+             * 
+             * I am not going to type up many code comments for those aforementioned functions and the same goes for this function.
+             * 
+             * I have had enough for one evening. Good night, Nathan.
+             */
+
+            // When the player clicks on the Start button, the panel will disappear.
+            panel1.Enabled = false;
+            panel1.Visible = false;
+            Controls.Remove(panel1);
+
+            // Added on 8th January 2025. I wanted the game over message to appear outside of the game title panel and so this code below may be needed and hopefully it hides after the start button is clicked on...
+            gameOverMessage.Enabled = false;
+            gameOverMessage.Visible = false;
+
+            // Added on 8th January 2025. An extra panel with a replay button was added and it only appears at the end of the first game and all other games.
+            replayPanel.Enabled = false;
+            replayPanel.Visible = false;
+
+            goLeft = goRight = goUp = goDown = false;
+            noLeft = noRight = noUp = noDown = false;
+
+
+
+            // The score displays the number zero as the player will be playing this game for the first time ever or for the first time in their current gameplay session.
+            score = 0;
+
+            //dogSprite.Image = Properties.Resources.Red_test_sprite_06_January_2025; // Added on 8th January 2025. This code will reset the dog sprite to its starting appearance.
+
+            dogSprite.Image = Properties.Resources.Dog_sprite_face_12_January_2025;
+
+            
+            //dogSprite.Size = new Size(55, 55);
+            //// Added on 10th January 2025.
+
+
+            // The enemy sprite code will be added in the near future.
+
+            // Added on Wednesday, 8th January 2025.
+            // Timestamp in the tutorial video on YouTube: 01:18:35
+
+
+            // This code resets the position of the enemy sprites to the starting position when the game ends.
+            // The tutorial video said new Point is quite convenient for setting new locations for things.
+            //enemyOne.img.Location = new Point(97, 100);
+            //    enemyTwo.img.Location = new Point(847, 100);
+            //    enemyThree.img.Location = new Point(97, 640);
+            //    enemyFour.img.Location = new Point(847, 640);
+
+            // Updated on Thursday, 23rd January 2025.
+            enemyOne.img.Location = new Point(95 /*97*/, 100);
+            enemyTwo.img.Location = new Point(867 /*847*/, 100);
+            enemyThree.img.Location = new Point(95, 840 /*97, 640*/);
+            enemyFour.img.Location = new Point(867, 840 /*847, 640*/);
+
+            //// Added and commented out on Thursday, 23rd January 2025.
+            //label4.ForeColor = Color.FromArgb(0,0,0,0);
 
             // Finally, the game timer starts and the aforementioned functions finally become functional!
             gameTimer.Start();
 
             
         }
+
+        private void OpenInformation(object sender, EventArgs e)
+        {
+            // Added on Friday, 24th January 2025.
+            
+            /*
+             * Woohoo! I succeeded in making the game information label change colour and display the game information. This works when a player moves their mouse to the label and hovers over it.
+             */
+            
+            label5.ForeColor = Color.IndianRed;
+            gameInfoMessage.Show();
+            //GameInformation("Snaccident Dog:" +
+            //    Environment.NewLine + 
+            //    "Try to get your dog to eat all the dog treats before they get caught." +
+            //    Environment.NewLine +
+            //    Environment.NewLine +
+            //    "Game created by Nathan Ng (Nathan Tries To Make Games)" +
+            //    Environment.NewLine +
+            //    "Feel free to view and download the code for Snaccident Dog on GitHub (snaccident-png)." +
+            //    Environment.NewLine +
+            //    Environment.NewLine +
+            //    "Many thanks for playing." + 
+            //    Environment.NewLine +
+            //    "Nathan Tries To Make Games | 2025");
+
+            GameInformation("Snaccident Dog - A hopefully simple and easy-to-play game which may be a little bit stressful at times. Good luck!" +
+                Environment.NewLine +
+                Environment.NewLine +
+                "Special thanks to Moo ICT for inspiring me to make this game." +
+                Environment.NewLine +
+                Environment.NewLine +
+                Environment.NewLine +
+                Environment.NewLine +
+                "Nathan Tries To Make Games | 2024 - 2025");
+        }
+
+        private void CloseInformation(object sender, EventArgs e)
+        {
+            label5.ForeColor = Color.White;
+
+            gameInfoMessage.Hide();
+        }
+
+        //private void ReturnToStartPage(object sender, EventArgs e)
+        //{
+        //    //gameTimer.Stop();
+
+        //    //panel1.Enabled = true;
+        //    //panel1.Visible = true;
+
+        //    //replayPanel.Enabled = false;
+        //    //replayPanel.Visible = false;
+
+        //    //ShowFoodAgain();
+
+
+
+        //    // This sort of worked but after clicking on the start page button and then clicking on the start button, the game timer seems to cut off earlier and earlier and one dog treat is treated as two treats, three treats, four treats and so on in every other game afterwards.
+
+        //    // I tried to find a solution on the internet and I was aware my wording in my questions may have sounded like my questions wanted a different response.
+
+        //    // I watched one video on YouTube which showed how to open a new form from one form but that is not my aim. I would like to return to the startup screen for Snaccident Dog from the replay panel.
+
+        //    // Maybe my aim is just impossible to achieve?
+
+        //    //gameTimer.Stop();
+        //    //this.Controls.Clear();
+
+        //    //this.InitializeComponent();
+        //    //this.SetUp();
+
+
+
+        //    // This line of code does nothing.
+        //    //Form1 form = new Form1();
+
+
+
+        //    /*
+        //     * OK, well, this also worked.
+        //     * 
+        //     * With these lines of code below, clicking on the start page button will open a new window showing Snaccident Dog from the start page again. During gameplay, the game timer seems to be unproblematic (the game timer runs for as long as gameplay is happening, woohoo!) but I have to close the current window then close all of the other windows.
+        //     * 
+        //     * Good effort, Nathan, but maybe you should stop trying to achieve the impossible.
+        //     */
+        //    //this.Controls.Clear();
+
+        //    //Form1 form1 = new Form1();
+        //    //form1.Show();
+
+        //}
 
         private void GameTimerEvent(object sender, EventArgs e)
         {
@@ -233,7 +422,7 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
             foreach (PictureBox food in dogTreats)
             {
                 EatFood(dogSprite, food);
-                this.Text = "Food eaten: " + score; // Added on 8th January 2025. The current amount of food eaten by the dog sprite now appears on the top-left corner of the application window!  
+                // this.Text = "Food eaten: " + score; // Added on 8th January 2025. The current amount of food eaten by the dog sprite now appears on the top-left corner of the application window!  
             }
 
 
@@ -249,14 +438,48 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
 
 
                 // Added on Wednesday, 8th January 2025.
-                // Timestamp in the tutorial video on YouTube: 01:25:10
+                // Timestamp in the tutorial video on YouTube: 01:25:10              
 
                 GameOver("Well done! Your dog is now a very happy dog!");
                 gameOverMessage.ForeColor = Color.Yellow;
+
+                dogSprite.Image = Properties.Resources.dogSprite_with_faster_animation; // Added on 10th January 2025.
+
+                dogSprite.Size = new Size(300, 300);
+                dogSprite.Location = new Point(367, 305);
+
+                //pictureBox73.Enabled = true;
+                //pictureBox73.Visible = true;
+
+
+
+                // Added on Saturday, 18th January 2025.
+                
+                /* 
+                 * I fixed the dog sprite change issue that happens when I press on
+                 * the arrow keys partially. Now, at the end of the first successful
+                 * game, the arrow keys do nothing and the enlarged dog sprite stays
+                 * on screen.
+                 * 
+                 * Unfortunately, I was unable to fix this issue at the end of the first unsuccessful game. I deleted the two lines of code below from the ELSE statement already but when the code was in the statement and when I started the game and tested the code, the dog sprite became unplayable which brought back dreadful feelings I felt during development on Nathan's Snake Game, version 3.
+                 * 
+                 * I think for the first unsuccessful game I may leave the bug in and treat it as a fun, little thing players can do like they can on a webpage window on Google Chrome when the internet is offline.
+                 */
+                goLeft = goRight = goDown = goUp = false;
+                noLeft = noRight = noDown = noUp = true;
+
+
+
             }
             else
             {
                 gameOverMessage.ForeColor = Color.Red; // Added my own code on 8th January 2025. This ELSE statement changes back the colour of the game over message to red which is the case when the dog sprite runs into an enemy sprite and causes the game to end.
+
+                //dogSprite.Image = Properties.Resources.dogSprite_09_Jan_2025;
+                //dogSprite.Size = new Size(100, 100);
+
+                // Added on 10th January 2025.
+
             }
 
             // With the code for the enemy sprites typed up, the sprites and their movements have been added here. Apparently each enemy sprite will dote on the dog sprite but so far in my tests no such thing has happened yet but the tutorial video playing in the background may be covering this game mechanism! (10:36pm)
@@ -325,19 +548,43 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
             // For the initial test version of Snaccident Dog (January 2025), I will use the rainbow assortment of placeholder sprites.
             // If the initial test works well, when I choose to create version 1 later, I will swap out the placeholder sprites with the final enemy sprites and repeat this replacement process for all other placeholder sprites.
 
-            enemyOne = new Ghost(this, Properties.Resources.Purple_violet_indigo_test_sprite_06_January_2025, 97, 100);
+            // Updated on 10-January-2025. I replaced the ... No idea as to what I wanted to record here.
+
+
+
+            // However, ... today is Thursday, 23rd January 2025 and earlier this morning I updated the X and Y coordinates for the enemy sprites following the re-sizing event of the 23rd of January 2025.
+
+            // This afternoon, I want to figure out why the bottom two enemy sprites start at their new positions below then immediately appear at what may be their previous starting positions which are higher.
+
+            // I think I found where the issue is and how to fix it. I am also aware that I have spent the past six minutes typing on the screen so I will get to bug fixing or whatever I will do now and show rather than tell.
+
+
+
+            enemyOne = new Ghost(this, Properties.Resources.Dachshund_sprite_22_January_2025 
+                /*Mum_face_sprite_09_January_2025*/
+                /*Purple_violet_indigo_test_sprite_06_January_2025*/, 95, 100);
             enemies.Add(enemyOne);
 
-            enemyTwo = new Ghost(this, Properties.Resources.Green_test_sprite_06_January_2025, 847, 100);
-            
-            // The second number representing the y-axis or vertical (upwards and downwards) space stays the same for two sprites at a time. This ensures each enemy sprite appears in their own corner and appears almost parallel (side by side but never meeting?) to the two other enemy sprites on the x- and y-axis, respectively.
+            enemyTwo = new Ghost(this, Properties.Resources.Black_Labrador_sprite_22_January_2025
+                /*Dad_face_sprite_09_January_2025*/
+                /*Green_test_sprite_06_January_2025*/, 867, 100);
             enemies.Add(enemyTwo);
 
-            enemyThree = new Ghost(this, Properties.Resources.Orange_test_sprite_06_January_2025, 97, 640);
+            enemyThree = new Ghost(this, Properties.Resources.Rottweiler_sprite_22_January_2025
+                /*Brother_face_sprite_09_January_2025*/
+                /*Orange_test_sprite_06_January_2025*/, 95, 840);
             enemies.Add(enemyThree);
 
-            enemyFour = new Ghost(this, Properties.Resources.Yellow_test_sprite_06_January_2025, 847, 640);
+            enemyFour = new Ghost(this, Properties.Resources.Yorkshire_Terrier_sprite_22_January_2025
+                /*Other_brother_face_sprite_09_January_2025*/
+                /*Yellow_test_sprite_06_January_2025*/, 867, 840);
             enemies.Add(enemyFour);
+
+            // The second number representing the y-axis or vertical (upwards and downwards) space stays the same for two sprites at a time. This ensures each enemy sprite appears in their own corner and appears almost parallel (side by side but never meeting?) to the two other enemy sprites on the x- and y-axis, respectively.
+
+            // Added on Friday, 10th January 2025. I successfully made the panel that shows up on startup semi-transparent. If I tried doing this before and it failed then I have found the solution this evening.
+
+            panel1.BackColor = Color.FromArgb(50,0,0,0);
         }
 
         private void PlayerMovements()
@@ -428,7 +675,7 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
             // DISAPPEARS ON TOP EDGE THEN REAPPEARS ON BOTTOM EDGE.
             if (dogSprite.Top < -60)
             {
-                dogSprite.Top = this.ClientSize.Height - dogSprite.Height + 60; // Changing .Width to .Height as per tutorial video makes the dog sprite reappear from the bottom edge faster. This also works.
+                dogSprite.Top = this.ClientSize.Height - dogSprite.Height + 30; // Changing .Width to .Height as per tutorial video makes the dog sprite reappear from the bottom edge faster. This also works.
             }
 
 
@@ -600,8 +847,35 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
 
             if (dogSprite.Bounds.IntersectsWith(enemy.Bounds))
             {
+                // Added on Sunday, 12th January 2025.
+
+                /*
+                 * I wondered if I could introduce a delay in time between an enemy sprite meeting the dog sprite and the game over elements showing up.
+                 * 
+                 * I tried to come up with my own solution first which used the gameTimer feature but I decided to move on. None of the gameTimer attributes or properties looked useful so I moved on and tried to find a tutorial video on YouTube again to help me achieve my goal.
+                 */
+                // gameTimer.
+
+                /*
+                 * What about this? (7:59pm)
+                 * ...
+                 * Wow! Oh my gosh, it worked!
+                 * 
+                 * The delay was a bit too long so I will reduce three thousand to a lower number and test the game until the delay feels or looks right.
+                 * 
+                 * Six hundred or one thousand works. I kind of like the comedic timin of six hundred.
+                 * 
+                 * OK, now I know the System.Threading thing and Thread.Sleep() are the things I need to introduce a delay, I have just now thought about showing an alternate GIF animation which shows the dog sprite having been caught by an enemy sprite in grayscale colours. 
+                 */
+
+                dogSprite.Image = Properties.Resources.Dog_sprite_FACE_ONLY_front_side_caught_by_enemy_state_12_January_2025;
+
+                Thread.Sleep(/*3000*/ 600 /*1000*/);
+
+
+
                 // If this works in the game, this will have been fun to do!
-                GameOver("Oh, no! Good try though. Your dog ate " +  score + " dog treats. Better luck next time.");
+                GameOver("Oh, no! Good try though. Your dog ate " + score + " dog treats. Better luck next time.");
 
                 // Call up the public function called ChangeDirection() in the Ghost class file.
                 g.ChangeDirection();
@@ -636,6 +910,7 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
             gameOverMessage.Enabled = true;
             gameOverMessage.Visible = true;
 
+
             // Ah yes, this.
             gameTimer.Stop();
 
@@ -643,10 +918,28 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
             replayPanel.Enabled = true;
             replayPanel.Visible = true;
 
+
+
+            // Added on Friday, 10th January 2025. Now this code works, I will have applied this code to the replay game panel.
+
+            // Commented out on Monday, 20th January 2025. This line of code made the background colour of the replay panel take on a different colour, regardless of the first value having zero or one hundred.
+
+            //replayPanel.BackColor = Color.FromArgb(0, 0, 0, 0);
+
+
+
+            // Ahhhhh why not alter the background transparency of the game over panel.
+
+            // Commented out on Monday, 20th January 2025. The same goes for this line of code affecting background colour transparency
+
+            // gameOverMessage.BackColor = Color.FromArgb(0, 255, 0, 0);
+
             ShowFoodAgain(); // The feature that does not work haha
 
             // This line of code resets the position of the dog sprite to the starting position. I may not want this though.
-            dogSprite.Location = new Point(473, 367);
+            // Updated on 10th January 2025. As it turns out, this Location command is necessary because with it off, the dog sprite is... (13th January edit) ... appears somewhere weird.
+            
+            dogSprite.Location = new Point(484, 473);
 
             /*
              * Adding lblInfo.Text which the guy in the tutorial video was going to use to display a custom message at the end of the game did not work for me. Then I wondered if I needed to add an extra label or something to the game board and watched a much earlier section of the tutorial video to see if the guy added something called lblInfo and he did, I think.
@@ -659,6 +952,17 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
             gameOverMessage.Text = message;
             }      
 
+        private void GameInformation(string message)
+        {
+            // Added on Friday, 24th January 2025.
+
+            // I wanted to give credit to the YouTube channel which uploaded a tutorial video which helped me create Snaccident Dog so here I am about to create a brand new function to achieve my aim. Even if this fails, at least I tried.
+
+            gameInfoMessage.Enabled = true;
+            gameInfoMessage.Visible = true;
+
+            gameInfoMessage.Text = message;
+        }
 
     }
 }
