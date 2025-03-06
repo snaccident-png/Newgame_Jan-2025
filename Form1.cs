@@ -60,6 +60,14 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
 
 
 
+        // Added on Wednesday, 5th March 2025.
+        // Oh good! The Chocolate class is working again! For unknown reasons, the Chocolate class became weird. But then I opened this project however long ago earlier this evening and, as if by magic, the reference to the class started working again.
+        Chocolate chocolateBar;
+
+        // My attempted remedy for fixing the following issue: Argument 1: cannot convert from 'Snaccident_Dog_attempt_one_06_January_2025.Chocolate' to 'System.Windows.Forms.PictureBox'
+        List<Chocolate> choco = new List<Chocolate>();
+
+
 
         public Form1()
         {
@@ -177,10 +185,15 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
 
             dogSprite.Size = new Size(55, 55);
             dogSprite.Location = new Point(484, 473);
+            
+            
+            
             // Added on 14th January 2025. This weirdly fixed the bug or issue. If I tried this fix beforehand on 10th January then I must have fudged something or did something wrong.
 
 
             // The enemy sprite code will be added in the near future.
+
+
 
             // Added on Wednesday, 8th January 2025.
             // Timestamp in the tutorial video on YouTube: 01:18:35
@@ -194,6 +207,13 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
             enemyTwo.img.Location = new Point(867 /*847*/, 100);
             enemyThree.img.Location = new Point(95, 840 /*97, 640*/);
             enemyFour.img.Location = new Point(867, 840 /*847, 640*/);
+
+
+
+            // Added on Wednesday, 5th March 2025.
+            chocolateBar.img.Location = new Point(95, 100);
+
+
 
             // Finally, the game timer starts and the aforementioned functions finally become functional!
             gameTimer.Start();
@@ -283,10 +303,15 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
             //// Added and commented out on Thursday, 23rd January 2025.
             //label4.ForeColor = Color.FromArgb(0,0,0,0);
 
+
+
+            // Added on Wednesday, 5th March 2025.
+            chocolateBar.img.Location = new Point(95, 100);
+
+
+
             // Finally, the game timer starts and the aforementioned functions finally become functional!
             gameTimer.Start();
-
-            
         }
 
         private void OpenInformation(object sender, EventArgs e)
@@ -467,9 +492,6 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
                  */
                 goLeft = goRight = goDown = goUp = false;
                 noLeft = noRight = noDown = noUp = true;
-
-
-
             }
             else
             {
@@ -499,7 +521,35 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
             {
                 EnemyAttack(enemy, dogSprite, enemy.img);
             }
+
+
+
+            // Added on Wednesday, 5th March 2025.
+            // This did not work.
+            foreach (Chocolate chocolate in choco)
+            {
+                ChocolateToxic(chocolate, dogSprite);
+            }
+
+
+
         }
+
+        // Added on Thursday, 6th March 2025.
+        
+        /*
+         * I clicked on a suggested solution provided by Visual Studio for solving the 'cannot convert' issue I 
+         * struggling to solve and it seemed to work. The issue was eliminated, I was able to launch the game
+         * and I got past the splash screen and saw the homepage. However, once I clicked on Start, the game
+         * crashed and Visual Studio told me the NotImplementedException class thing was not implemented.
+         * 
+         * I may post this issue to GitHub and see if any strangers can help.
+         */
+        
+        //private void ChocolateToxic(Chocolate chocolate, PictureBox dogSprite)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         private void SetUp()
         {
@@ -585,6 +635,14 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
             // Added on Friday, 10th January 2025. I successfully made the panel that shows up on startup semi-transparent. If I tried doing this before and it failed then I have found the solution this evening.
 
             panel1.BackColor = Color.FromArgb(50,0,0,0);
+
+
+
+            // Added on Wednesday, 5th March 2025.
+            chocolateBar = new Chocolate(this, Properties.Resources.Blue_test_sprite_06_January_2025, 95, 100);
+
+            // Added on Wednesday, 5th March 2025.
+             choco.Add(chocolateBar);
         }
 
         private void PlayerMovements()
@@ -879,6 +937,29 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
 
                 // Call up the public function called ChangeDirection() in the Ghost class file.
                 g.ChangeDirection();
+            }
+        }
+
+        private void ChocolateToxic(PictureBox dogSprite, PictureBox Choco)
+        {
+            // Added on Wednesday, 5th March 2025.
+
+            /* 
+             * The ChocolateToxic() function checks the interaction between the dog sprite and the chocolate bar sprite.
+             * 
+             * When the dog sprite meets the chocolate bar sprite, the game will end. The replay game function that will display at the end of every game should be here as this function is a modified enemy sprite function.
+             */
+
+            if (dogSprite.Bounds.IntersectsWith(Choco.Bounds))
+            {
+                dogSprite.Image = Properties.Resources.Dog_sprite_FACE_ONLY_front_side_caught_by_enemy_state_12_January_2025;
+
+                Thread.Sleep(/*3000*/ 600 /*1000*/);
+
+
+
+                // If this works in the game, this will have been fun to do!
+                GameOver("Oh, no! Your dog ate the chocolate! Your dog ate " + score + " dog treats. Better luck next time.");
             }
         }
 

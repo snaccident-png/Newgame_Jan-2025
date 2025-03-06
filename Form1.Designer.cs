@@ -41,6 +41,15 @@
             this.gameInstructions = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox64 = new System.Windows.Forms.PictureBox();
+            this.pictureBox65 = new System.Windows.Forms.PictureBox();
+            this.pictureBox66 = new System.Windows.Forms.PictureBox();
+            this.pictureBox67 = new System.Windows.Forms.PictureBox();
+            this.pictureBox68 = new System.Windows.Forms.PictureBox();
+            this.pictureBox72 = new System.Windows.Forms.PictureBox();
+            this.pictureBox69 = new System.Windows.Forms.PictureBox();
+            this.pictureBox70 = new System.Windows.Forms.PictureBox();
+            this.pictureBox71 = new System.Windows.Forms.PictureBox();
             this.gameInfoMessage = new System.Windows.Forms.Label();
             this.instructionsVisual = new System.Windows.Forms.PictureBox();
             this.pictureBox43 = new System.Windows.Forms.PictureBox();
@@ -87,15 +96,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.boundaryShapes = new System.Windows.Forms.PictureBox();
-            this.pictureBox64 = new System.Windows.Forms.PictureBox();
-            this.pictureBox65 = new System.Windows.Forms.PictureBox();
-            this.pictureBox66 = new System.Windows.Forms.PictureBox();
-            this.pictureBox67 = new System.Windows.Forms.PictureBox();
-            this.pictureBox68 = new System.Windows.Forms.PictureBox();
-            this.pictureBox72 = new System.Windows.Forms.PictureBox();
-            this.pictureBox69 = new System.Windows.Forms.PictureBox();
-            this.pictureBox70 = new System.Windows.Forms.PictureBox();
-            this.pictureBox71 = new System.Windows.Forms.PictureBox();
             this.pictureBox73 = new System.Windows.Forms.PictureBox();
             this.dogSprite = new System.Windows.Forms.PictureBox();
             this.pictureBox48 = new System.Windows.Forms.PictureBox();
@@ -120,6 +120,15 @@
             this.pictureBox61 = new System.Windows.Forms.PictureBox();
             this.replayPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox64)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox65)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox66)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox67)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox68)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox72)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox69)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox70)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox71)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.instructionsVisual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
@@ -165,15 +174,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boundaryShapes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox64)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox65)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox66)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox67)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox68)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox72)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox69)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox70)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox71)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox73)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dogSprite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
@@ -354,6 +354,106 @@
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label5.MouseLeave += new System.EventHandler(this.CloseInformation);
             this.label5.MouseHover += new System.EventHandler(this.OpenInformation);
+            // 
+            // pictureBox64
+            // 
+            this.pictureBox64.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox64.Image")));
+            this.pictureBox64.Location = new System.Drawing.Point(-143, -75);
+            this.pictureBox64.Name = "pictureBox64";
+            this.pictureBox64.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox64.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox64.TabIndex = 3;
+            this.pictureBox64.TabStop = false;
+            this.pictureBox64.Tag = "food";
+            // 
+            // pictureBox65
+            // 
+            this.pictureBox65.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox65.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox65.Image")));
+            this.pictureBox65.Location = new System.Drawing.Point(-51, -75);
+            this.pictureBox65.Name = "pictureBox65";
+            this.pictureBox65.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox65.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox65.TabIndex = 3;
+            this.pictureBox65.TabStop = false;
+            this.pictureBox65.Tag = "food";
+            // 
+            // pictureBox66
+            // 
+            this.pictureBox66.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox66.Image")));
+            this.pictureBox66.Location = new System.Drawing.Point(-97, -75);
+            this.pictureBox66.Name = "pictureBox66";
+            this.pictureBox66.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox66.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox66.TabIndex = 3;
+            this.pictureBox66.TabStop = false;
+            this.pictureBox66.Tag = "food";
+            // 
+            // pictureBox67
+            // 
+            this.pictureBox67.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox67.Image")));
+            this.pictureBox67.Location = new System.Drawing.Point(-5, -75);
+            this.pictureBox67.Name = "pictureBox67";
+            this.pictureBox67.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox67.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox67.TabIndex = 3;
+            this.pictureBox67.TabStop = false;
+            this.pictureBox67.Tag = "food";
+            // 
+            // pictureBox68
+            // 
+            this.pictureBox68.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox68.Image")));
+            this.pictureBox68.Location = new System.Drawing.Point(41, -75);
+            this.pictureBox68.Name = "pictureBox68";
+            this.pictureBox68.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox68.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox68.TabIndex = 3;
+            this.pictureBox68.TabStop = false;
+            this.pictureBox68.Tag = "food";
+            // 
+            // pictureBox72
+            // 
+            this.pictureBox72.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox72.Image")));
+            this.pictureBox72.Location = new System.Drawing.Point(-143, 109);
+            this.pictureBox72.Name = "pictureBox72";
+            this.pictureBox72.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox72.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox72.TabIndex = 3;
+            this.pictureBox72.TabStop = false;
+            this.pictureBox72.Tag = "food";
+            // 
+            // pictureBox69
+            // 
+            this.pictureBox69.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox69.Image")));
+            this.pictureBox69.Location = new System.Drawing.Point(-143, -29);
+            this.pictureBox69.Name = "pictureBox69";
+            this.pictureBox69.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox69.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox69.TabIndex = 3;
+            this.pictureBox69.TabStop = false;
+            this.pictureBox69.Tag = "food";
+            // 
+            // pictureBox70
+            // 
+            this.pictureBox70.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox70.Image")));
+            this.pictureBox70.Location = new System.Drawing.Point(-143, 18);
+            this.pictureBox70.Name = "pictureBox70";
+            this.pictureBox70.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox70.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox70.TabIndex = 3;
+            this.pictureBox70.TabStop = false;
+            this.pictureBox70.Tag = "food";
+            // 
+            // pictureBox71
+            // 
+            this.pictureBox71.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox71.Image")));
+            this.pictureBox71.Location = new System.Drawing.Point(-143, 64);
+            this.pictureBox71.Name = "pictureBox71";
+            this.pictureBox71.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox71.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox71.TabIndex = 3;
+            this.pictureBox71.TabStop = false;
+            this.pictureBox71.Tag = "food";
             // 
             // gameInfoMessage
             // 
@@ -902,106 +1002,6 @@
             this.boundaryShapes.TabStop = false;
             this.boundaryShapes.Tag = "wall";
             // 
-            // pictureBox64
-            // 
-            this.pictureBox64.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox64.Image")));
-            this.pictureBox64.Location = new System.Drawing.Point(-143, -75);
-            this.pictureBox64.Name = "pictureBox64";
-            this.pictureBox64.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox64.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox64.TabIndex = 3;
-            this.pictureBox64.TabStop = false;
-            this.pictureBox64.Tag = "food";
-            // 
-            // pictureBox65
-            // 
-            this.pictureBox65.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox65.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox65.Image")));
-            this.pictureBox65.Location = new System.Drawing.Point(-51, -75);
-            this.pictureBox65.Name = "pictureBox65";
-            this.pictureBox65.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox65.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox65.TabIndex = 3;
-            this.pictureBox65.TabStop = false;
-            this.pictureBox65.Tag = "food";
-            // 
-            // pictureBox66
-            // 
-            this.pictureBox66.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox66.Image")));
-            this.pictureBox66.Location = new System.Drawing.Point(-97, -75);
-            this.pictureBox66.Name = "pictureBox66";
-            this.pictureBox66.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox66.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox66.TabIndex = 3;
-            this.pictureBox66.TabStop = false;
-            this.pictureBox66.Tag = "food";
-            // 
-            // pictureBox67
-            // 
-            this.pictureBox67.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox67.Image")));
-            this.pictureBox67.Location = new System.Drawing.Point(-5, -75);
-            this.pictureBox67.Name = "pictureBox67";
-            this.pictureBox67.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox67.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox67.TabIndex = 3;
-            this.pictureBox67.TabStop = false;
-            this.pictureBox67.Tag = "food";
-            // 
-            // pictureBox68
-            // 
-            this.pictureBox68.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox68.Image")));
-            this.pictureBox68.Location = new System.Drawing.Point(41, -75);
-            this.pictureBox68.Name = "pictureBox68";
-            this.pictureBox68.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox68.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox68.TabIndex = 3;
-            this.pictureBox68.TabStop = false;
-            this.pictureBox68.Tag = "food";
-            // 
-            // pictureBox72
-            // 
-            this.pictureBox72.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox72.Image")));
-            this.pictureBox72.Location = new System.Drawing.Point(-143, 109);
-            this.pictureBox72.Name = "pictureBox72";
-            this.pictureBox72.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox72.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox72.TabIndex = 3;
-            this.pictureBox72.TabStop = false;
-            this.pictureBox72.Tag = "food";
-            // 
-            // pictureBox69
-            // 
-            this.pictureBox69.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox69.Image")));
-            this.pictureBox69.Location = new System.Drawing.Point(-143, -29);
-            this.pictureBox69.Name = "pictureBox69";
-            this.pictureBox69.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox69.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox69.TabIndex = 3;
-            this.pictureBox69.TabStop = false;
-            this.pictureBox69.Tag = "food";
-            // 
-            // pictureBox70
-            // 
-            this.pictureBox70.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox70.Image")));
-            this.pictureBox70.Location = new System.Drawing.Point(-143, 18);
-            this.pictureBox70.Name = "pictureBox70";
-            this.pictureBox70.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox70.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox70.TabIndex = 3;
-            this.pictureBox70.TabStop = false;
-            this.pictureBox70.Tag = "food";
-            // 
-            // pictureBox71
-            // 
-            this.pictureBox71.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox71.Image")));
-            this.pictureBox71.Location = new System.Drawing.Point(-143, 64);
-            this.pictureBox71.Name = "pictureBox71";
-            this.pictureBox71.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox71.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox71.TabIndex = 3;
-            this.pictureBox71.TabStop = false;
-            this.pictureBox71.Tag = "food";
-            // 
             // pictureBox73
             // 
             this.pictureBox73.BackColor = System.Drawing.Color.Transparent;
@@ -1366,6 +1366,15 @@
             this.replayPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox64)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox65)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox66)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox67)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox68)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox72)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox69)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox70)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox71)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.instructionsVisual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
@@ -1411,15 +1420,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boundaryShapes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox64)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox65)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox66)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox67)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox68)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox72)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox69)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox70)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox71)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox73)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dogSprite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).EndInit();
