@@ -25,8 +25,8 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
             // Written on Wednesday, 12th February 2025.
             // Here we are! I tried to find this line of code below. It turns out Program.cs was the file I was looking for.
             Application.Run(new splashScreenSD()); // Replaced Form1 which contains the code for SD with the splash screen class file.
-                                                 //
-                                                 // /*Form1()*/);
+                                                   //
+                                                   //Form1());
         }
     }
 }

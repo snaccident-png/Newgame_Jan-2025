@@ -34,12 +34,12 @@
             this.replayPanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.gameOverMessage = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.gameInstructions = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.versionNo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox64 = new System.Windows.Forms.PictureBox();
             this.pictureBox65 = new System.Windows.Forms.PictureBox();
@@ -118,6 +118,26 @@
             this.pictureBox60 = new System.Windows.Forms.PictureBox();
             this.pictureBox62 = new System.Windows.Forms.PictureBox();
             this.pictureBox61 = new System.Windows.Forms.PictureBox();
+            this.pictureBox74 = new System.Windows.Forms.PictureBox();
+            this.pictureBox75 = new System.Windows.Forms.PictureBox();
+            this.pictureBox76 = new System.Windows.Forms.PictureBox();
+            this.safeSpace = new System.Windows.Forms.PictureBox();
+            this.safeSpaceShortEdge1 = new System.Windows.Forms.PictureBox();
+            this.safeSpaceShortEdge2 = new System.Windows.Forms.PictureBox();
+            this.safeSpaceShortEdge6 = new System.Windows.Forms.PictureBox();
+            this.safeSpaceShortEdge5 = new System.Windows.Forms.PictureBox();
+            this.safeSpaceShortEdge8 = new System.Windows.Forms.PictureBox();
+            this.safeSpaceShortEdge7 = new System.Windows.Forms.PictureBox();
+            this.safeSpaceShortEdge4 = new System.Windows.Forms.PictureBox();
+            this.safeSpaceShortEdge3 = new System.Windows.Forms.PictureBox();
+            this.safeSpaceLongEdge1 = new System.Windows.Forms.PictureBox();
+            this.safeSpaceLongEdge3 = new System.Windows.Forms.PictureBox();
+            this.safeSpaceLongEdge4 = new System.Windows.Forms.PictureBox();
+            this.safeSpaceLongEdge2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox77 = new System.Windows.Forms.PictureBox();
+            this.proposedPauseButton = new System.Windows.Forms.PictureBox();
+            this.newFeaturesInfo = new System.Windows.Forms.Label();
+            this.helpfulHint1 = new System.Windows.Forms.Label();
             this.replayPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox64)).BeginInit();
@@ -196,6 +216,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox62)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox61)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox74)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox75)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox76)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpace)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceLongEdge1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceLongEdge3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceLongEdge4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceLongEdge2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox77)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proposedPauseButton)).BeginInit();
             this.SuspendLayout();
             // 
             // gameTimer
@@ -240,19 +278,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.ReplayGame);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(197, 104);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 32);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Version 1";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // gameOverMessage
             // 
             this.gameOverMessage.BackColor = System.Drawing.Color.Black;
@@ -269,9 +294,10 @@
             // 
             this.startButton.AccessibleDescription = "Click here once to start playing the game.";
             this.startButton.AccessibleName = "Start button";
-            this.startButton.BackColor = System.Drawing.Color.Gold;
+            this.startButton.BackColor = System.Drawing.Color.YellowGreen;
             this.startButton.Font = new System.Drawing.Font("Comic Sans MS", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startButton.Location = new System.Drawing.Point(198, 167);
+            this.startButton.Margin = new System.Windows.Forms.Padding(0);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(137, 58);
             this.startButton.TabIndex = 0;
@@ -318,11 +344,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.versionNo);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.gameInstructions);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.startButton);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.pictureBox64);
             this.panel1.Controls.Add(this.pictureBox65);
             this.panel1.Controls.Add(this.pictureBox66);
@@ -336,6 +362,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(533, 357);
             this.panel1.TabIndex = 4;
+            // 
+            // versionNo
+            // 
+            this.versionNo.AccessibleDescription = "This game is called Snaccident Dog and it was created by Nathan Ng, the creator o" +
+    "f a small and little-known desktop game development hobby called Nathan Tries To" +
+    " Make Games. This is version 1.";
+            this.versionNo.AccessibleName = "Version 2";
+            this.versionNo.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.versionNo.AutoSize = true;
+            this.versionNo.BackColor = System.Drawing.Color.Transparent;
+            this.versionNo.Font = new System.Drawing.Font("Comic Sans MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.versionNo.ForeColor = System.Drawing.Color.White;
+            this.versionNo.Location = new System.Drawing.Point(196, 105);
+            this.versionNo.Name = "versionNo";
+            this.versionNo.Size = new System.Drawing.Size(140, 38);
+            this.versionNo.TabIndex = 4;
+            this.versionNo.Text = "Version 2";
+            this.versionNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -470,7 +514,6 @@
             // 
             // instructionsVisual
             // 
-            this.instructionsVisual.BackgroundImage = global::Snaccident_Dog_attempt_one_06_January_2025.Properties.Resources.VIsual_instructions_for_Snaccident_Dog_v4_10_February_2025;
             this.instructionsVisual.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.instructionsVisual.Image = global::Snaccident_Dog_attempt_one_06_January_2025.Properties.Resources.VIsual_instructions_for_Snaccident_Dog_v6_13_February_2025;
             this.instructionsVisual.Location = new System.Drawing.Point(192, 588);
@@ -1019,11 +1062,11 @@
             // 
             this.dogSprite.BackColor = System.Drawing.Color.Transparent;
             this.dogSprite.InitialImage = global::Snaccident_Dog_attempt_one_06_January_2025.Properties.Resources.Dog_sprite_face_12_January_2025;
-            this.dogSprite.Location = new System.Drawing.Point(484, 473);
+            this.dogSprite.Location = new System.Drawing.Point(484, 773);
             this.dogSprite.MinimumSize = new System.Drawing.Size(67, 65);
             this.dogSprite.Name = "dogSprite";
             this.dogSprite.Size = new System.Drawing.Size(67, 65);
-            this.dogSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.dogSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.dogSprite.TabIndex = 3;
             this.dogSprite.TabStop = false;
             // 
@@ -1032,7 +1075,7 @@
             this.pictureBox48.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox48.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox48.Image")));
             this.pictureBox48.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox48.InitialImage")));
-            this.pictureBox48.Location = new System.Drawing.Point(405, 241);
+            this.pictureBox48.Location = new System.Drawing.Point(405, 361);
             this.pictureBox48.Name = "pictureBox48";
             this.pictureBox48.Size = new System.Drawing.Size(40, 40);
             this.pictureBox48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1045,7 +1088,7 @@
             this.pictureBox44.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox44.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox44.Image")));
             this.pictureBox44.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox44.InitialImage")));
-            this.pictureBox44.Location = new System.Drawing.Point(497, 241);
+            this.pictureBox44.Location = new System.Drawing.Point(497, 361);
             this.pictureBox44.Name = "pictureBox44";
             this.pictureBox44.Size = new System.Drawing.Size(40, 40);
             this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1058,7 +1101,7 @@
             this.pictureBox49.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox49.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox49.Image")));
             this.pictureBox49.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox49.InitialImage")));
-            this.pictureBox49.Location = new System.Drawing.Point(497, 287);
+            this.pictureBox49.Location = new System.Drawing.Point(497, 407);
             this.pictureBox49.Name = "pictureBox49";
             this.pictureBox49.Size = new System.Drawing.Size(40, 40);
             this.pictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1071,7 +1114,7 @@
             this.pictureBox45.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox45.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox45.Image")));
             this.pictureBox45.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox45.InitialImage")));
-            this.pictureBox45.Location = new System.Drawing.Point(450, 241);
+            this.pictureBox45.Location = new System.Drawing.Point(450, 361);
             this.pictureBox45.Name = "pictureBox45";
             this.pictureBox45.Size = new System.Drawing.Size(40, 40);
             this.pictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1084,7 +1127,7 @@
             this.pictureBox50.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox50.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox50.Image")));
             this.pictureBox50.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox50.InitialImage")));
-            this.pictureBox50.Location = new System.Drawing.Point(450, 287);
+            this.pictureBox50.Location = new System.Drawing.Point(450, 407);
             this.pictureBox50.Name = "pictureBox50";
             this.pictureBox50.Size = new System.Drawing.Size(40, 40);
             this.pictureBox50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1097,7 +1140,7 @@
             this.pictureBox46.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox46.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox46.Image")));
             this.pictureBox46.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox46.InitialImage")));
-            this.pictureBox46.Location = new System.Drawing.Point(542, 241);
+            this.pictureBox46.Location = new System.Drawing.Point(542, 361);
             this.pictureBox46.Name = "pictureBox46";
             this.pictureBox46.Size = new System.Drawing.Size(40, 40);
             this.pictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1110,7 +1153,7 @@
             this.pictureBox51.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox51.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox51.Image")));
             this.pictureBox51.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox51.InitialImage")));
-            this.pictureBox51.Location = new System.Drawing.Point(542, 287);
+            this.pictureBox51.Location = new System.Drawing.Point(542, 407);
             this.pictureBox51.Name = "pictureBox51";
             this.pictureBox51.Size = new System.Drawing.Size(40, 40);
             this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1123,7 +1166,7 @@
             this.pictureBox53.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox53.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox53.Image")));
             this.pictureBox53.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox53.InitialImage")));
-            this.pictureBox53.Location = new System.Drawing.Point(405, 287);
+            this.pictureBox53.Location = new System.Drawing.Point(405, 407);
             this.pictureBox53.Name = "pictureBox53";
             this.pictureBox53.Size = new System.Drawing.Size(40, 40);
             this.pictureBox53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1136,7 +1179,7 @@
             this.pictureBox52.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox52.Image = global::Snaccident_Dog_attempt_one_06_January_2025.Properties.Resources.Food_sprite_06_January_2025;
             this.pictureBox52.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox52.InitialImage")));
-            this.pictureBox52.Location = new System.Drawing.Point(589, 287);
+            this.pictureBox52.Location = new System.Drawing.Point(589, 407);
             this.pictureBox52.Name = "pictureBox52";
             this.pictureBox52.Size = new System.Drawing.Size(40, 40);
             this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1149,7 +1192,7 @@
             this.pictureBox47.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox47.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox47.Image")));
             this.pictureBox47.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox47.InitialImage")));
-            this.pictureBox47.Location = new System.Drawing.Point(589, 241);
+            this.pictureBox47.Location = new System.Drawing.Point(589, 361);
             this.pictureBox47.Name = "pictureBox47";
             this.pictureBox47.Size = new System.Drawing.Size(40, 40);
             this.pictureBox47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1161,7 +1204,7 @@
             // 
             this.pictureBox57.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox57.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox57.Image")));
-            this.pictureBox57.Location = new System.Drawing.Point(450, 737);
+            this.pictureBox57.Location = new System.Drawing.Point(450, 620);
             this.pictureBox57.Name = "pictureBox57";
             this.pictureBox57.Size = new System.Drawing.Size(40, 40);
             this.pictureBox57.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1173,7 +1216,7 @@
             // 
             this.pictureBox54.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox54.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox54.Image")));
-            this.pictureBox54.Location = new System.Drawing.Point(497, 692);
+            this.pictureBox54.Location = new System.Drawing.Point(497, 575);
             this.pictureBox54.Name = "pictureBox54";
             this.pictureBox54.Size = new System.Drawing.Size(40, 40);
             this.pictureBox54.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1185,7 +1228,7 @@
             // 
             this.pictureBox55.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox55.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox55.Image")));
-            this.pictureBox55.Location = new System.Drawing.Point(497, 737);
+            this.pictureBox55.Location = new System.Drawing.Point(497, 620);
             this.pictureBox55.Name = "pictureBox55";
             this.pictureBox55.Size = new System.Drawing.Size(40, 40);
             this.pictureBox55.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1197,7 +1240,7 @@
             // 
             this.pictureBox56.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox56.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox56.Image")));
-            this.pictureBox56.Location = new System.Drawing.Point(450, 692);
+            this.pictureBox56.Location = new System.Drawing.Point(450, 575);
             this.pictureBox56.Name = "pictureBox56";
             this.pictureBox56.Size = new System.Drawing.Size(40, 40);
             this.pictureBox56.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1209,7 +1252,7 @@
             // 
             this.pictureBox58.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox58.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox58.Image")));
-            this.pictureBox58.Location = new System.Drawing.Point(542, 692);
+            this.pictureBox58.Location = new System.Drawing.Point(542, 575);
             this.pictureBox58.Name = "pictureBox58";
             this.pictureBox58.Size = new System.Drawing.Size(40, 40);
             this.pictureBox58.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1221,7 +1264,7 @@
             // 
             this.pictureBox63.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox63.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox63.Image")));
-            this.pictureBox63.Location = new System.Drawing.Point(405, 737);
+            this.pictureBox63.Location = new System.Drawing.Point(405, 620);
             this.pictureBox63.Name = "pictureBox63";
             this.pictureBox63.Size = new System.Drawing.Size(40, 40);
             this.pictureBox63.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1233,7 +1276,7 @@
             // 
             this.pictureBox59.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox59.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox59.Image")));
-            this.pictureBox59.Location = new System.Drawing.Point(542, 737);
+            this.pictureBox59.Location = new System.Drawing.Point(542, 620);
             this.pictureBox59.Name = "pictureBox59";
             this.pictureBox59.Size = new System.Drawing.Size(40, 40);
             this.pictureBox59.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1245,7 +1288,7 @@
             // 
             this.pictureBox60.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox60.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox60.Image")));
-            this.pictureBox60.Location = new System.Drawing.Point(589, 692);
+            this.pictureBox60.Location = new System.Drawing.Point(589, 575);
             this.pictureBox60.Name = "pictureBox60";
             this.pictureBox60.Size = new System.Drawing.Size(40, 40);
             this.pictureBox60.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1257,7 +1300,7 @@
             // 
             this.pictureBox62.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox62.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox62.Image")));
-            this.pictureBox62.Location = new System.Drawing.Point(405, 692);
+            this.pictureBox62.Location = new System.Drawing.Point(405, 575);
             this.pictureBox62.Name = "pictureBox62";
             this.pictureBox62.Size = new System.Drawing.Size(40, 40);
             this.pictureBox62.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1269,13 +1312,256 @@
             // 
             this.pictureBox61.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox61.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox61.Image")));
-            this.pictureBox61.Location = new System.Drawing.Point(589, 737);
+            this.pictureBox61.Location = new System.Drawing.Point(589, 620);
             this.pictureBox61.Name = "pictureBox61";
             this.pictureBox61.Size = new System.Drawing.Size(40, 40);
             this.pictureBox61.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox61.TabIndex = 3;
             this.pictureBox61.TabStop = false;
             this.pictureBox61.Tag = "food";
+            // 
+            // pictureBox74
+            // 
+            this.pictureBox74.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox74.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox74.Image")));
+            this.pictureBox74.Location = new System.Drawing.Point(853, 149);
+            this.pictureBox74.Name = "pictureBox74";
+            this.pictureBox74.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox74.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox74.TabIndex = 3;
+            this.pictureBox74.TabStop = false;
+            this.pictureBox74.Tag = "";
+            this.pictureBox74.Visible = false;
+            // 
+            // pictureBox75
+            // 
+            this.pictureBox75.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox75.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox75.Image")));
+            this.pictureBox75.Location = new System.Drawing.Point(146, 149);
+            this.pictureBox75.Name = "pictureBox75";
+            this.pictureBox75.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox75.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox75.TabIndex = 3;
+            this.pictureBox75.TabStop = false;
+            this.pictureBox75.Tag = "";
+            this.pictureBox75.Visible = false;
+            // 
+            // pictureBox76
+            // 
+            this.pictureBox76.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox76.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox76.Image")));
+            this.pictureBox76.Location = new System.Drawing.Point(146, 826);
+            this.pictureBox76.Name = "pictureBox76";
+            this.pictureBox76.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox76.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox76.TabIndex = 3;
+            this.pictureBox76.TabStop = false;
+            this.pictureBox76.Tag = "";
+            this.pictureBox76.Visible = false;
+            // 
+            // safeSpace
+            // 
+            this.safeSpace.BackColor = System.Drawing.Color.RosyBrown;
+            this.safeSpace.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.safeSpace.Location = new System.Drawing.Point(319, 305);
+            this.safeSpace.Margin = new System.Windows.Forms.Padding(2);
+            this.safeSpace.Name = "safeSpace";
+            this.safeSpace.Size = new System.Drawing.Size(397, 399);
+            this.safeSpace.TabIndex = 5;
+            this.safeSpace.TabStop = false;
+            this.safeSpace.Tag = "";
+            // 
+            // safeSpaceShortEdge1
+            // 
+            this.safeSpaceShortEdge1.BackColor = System.Drawing.Color.White;
+            this.safeSpaceShortEdge1.Location = new System.Drawing.Point(342, 305);
+            this.safeSpaceShortEdge1.Margin = new System.Windows.Forms.Padding(2);
+            this.safeSpaceShortEdge1.Name = "safeSpaceShortEdge1";
+            this.safeSpaceShortEdge1.Size = new System.Drawing.Size(128, 25);
+            this.safeSpaceShortEdge1.TabIndex = 6;
+            this.safeSpaceShortEdge1.TabStop = false;
+            this.safeSpaceShortEdge1.Tag = "keepout";
+            // 
+            // safeSpaceShortEdge2
+            // 
+            this.safeSpaceShortEdge2.BackColor = System.Drawing.Color.White;
+            this.safeSpaceShortEdge2.Location = new System.Drawing.Point(564, 305);
+            this.safeSpaceShortEdge2.Margin = new System.Windows.Forms.Padding(2);
+            this.safeSpaceShortEdge2.Name = "safeSpaceShortEdge2";
+            this.safeSpaceShortEdge2.Size = new System.Drawing.Size(128, 25);
+            this.safeSpaceShortEdge2.TabIndex = 7;
+            this.safeSpaceShortEdge2.TabStop = false;
+            this.safeSpaceShortEdge2.Tag = "keepout";
+            // 
+            // safeSpaceShortEdge6
+            // 
+            this.safeSpaceShortEdge6.BackColor = System.Drawing.Color.White;
+            this.safeSpaceShortEdge6.Location = new System.Drawing.Point(342, 679);
+            this.safeSpaceShortEdge6.Margin = new System.Windows.Forms.Padding(2);
+            this.safeSpaceShortEdge6.Name = "safeSpaceShortEdge6";
+            this.safeSpaceShortEdge6.Size = new System.Drawing.Size(128, 25);
+            this.safeSpaceShortEdge6.TabIndex = 6;
+            this.safeSpaceShortEdge6.TabStop = false;
+            this.safeSpaceShortEdge6.Tag = "keepout";
+            // 
+            // safeSpaceShortEdge5
+            // 
+            this.safeSpaceShortEdge5.BackColor = System.Drawing.Color.White;
+            this.safeSpaceShortEdge5.Location = new System.Drawing.Point(564, 679);
+            this.safeSpaceShortEdge5.Margin = new System.Windows.Forms.Padding(2);
+            this.safeSpaceShortEdge5.Name = "safeSpaceShortEdge5";
+            this.safeSpaceShortEdge5.Size = new System.Drawing.Size(128, 25);
+            this.safeSpaceShortEdge5.TabIndex = 7;
+            this.safeSpaceShortEdge5.TabStop = false;
+            this.safeSpaceShortEdge5.Tag = "keepout";
+            // 
+            // safeSpaceShortEdge8
+            // 
+            this.safeSpaceShortEdge8.BackColor = System.Drawing.Color.White;
+            this.safeSpaceShortEdge8.Location = new System.Drawing.Point(319, 329);
+            this.safeSpaceShortEdge8.Margin = new System.Windows.Forms.Padding(2);
+            this.safeSpaceShortEdge8.Name = "safeSpaceShortEdge8";
+            this.safeSpaceShortEdge8.Size = new System.Drawing.Size(25, 148);
+            this.safeSpaceShortEdge8.TabIndex = 8;
+            this.safeSpaceShortEdge8.TabStop = false;
+            this.safeSpaceShortEdge8.Tag = "keepout";
+            // 
+            // safeSpaceShortEdge7
+            // 
+            this.safeSpaceShortEdge7.BackColor = System.Drawing.Color.White;
+            this.safeSpaceShortEdge7.Location = new System.Drawing.Point(319, 532);
+            this.safeSpaceShortEdge7.Margin = new System.Windows.Forms.Padding(2);
+            this.safeSpaceShortEdge7.Name = "safeSpaceShortEdge7";
+            this.safeSpaceShortEdge7.Size = new System.Drawing.Size(25, 148);
+            this.safeSpaceShortEdge7.TabIndex = 8;
+            this.safeSpaceShortEdge7.TabStop = false;
+            this.safeSpaceShortEdge7.Tag = "keepout";
+            // 
+            // safeSpaceShortEdge4
+            // 
+            this.safeSpaceShortEdge4.BackColor = System.Drawing.Color.White;
+            this.safeSpaceShortEdge4.Location = new System.Drawing.Point(691, 532);
+            this.safeSpaceShortEdge4.Margin = new System.Windows.Forms.Padding(2);
+            this.safeSpaceShortEdge4.Name = "safeSpaceShortEdge4";
+            this.safeSpaceShortEdge4.Size = new System.Drawing.Size(25, 148);
+            this.safeSpaceShortEdge4.TabIndex = 9;
+            this.safeSpaceShortEdge4.TabStop = false;
+            this.safeSpaceShortEdge4.Tag = "keepout";
+            // 
+            // safeSpaceShortEdge3
+            // 
+            this.safeSpaceShortEdge3.BackColor = System.Drawing.Color.White;
+            this.safeSpaceShortEdge3.Location = new System.Drawing.Point(691, 329);
+            this.safeSpaceShortEdge3.Margin = new System.Windows.Forms.Padding(2);
+            this.safeSpaceShortEdge3.Name = "safeSpaceShortEdge3";
+            this.safeSpaceShortEdge3.Size = new System.Drawing.Size(25, 148);
+            this.safeSpaceShortEdge3.TabIndex = 10;
+            this.safeSpaceShortEdge3.TabStop = false;
+            this.safeSpaceShortEdge3.Tag = "keepout";
+            // 
+            // safeSpaceLongEdge1
+            // 
+            this.safeSpaceLongEdge1.BackColor = System.Drawing.Color.RosyBrown;
+            this.safeSpaceLongEdge1.Location = new System.Drawing.Point(319, 305);
+            this.safeSpaceLongEdge1.Margin = new System.Windows.Forms.Padding(2);
+            this.safeSpaceLongEdge1.Name = "safeSpaceLongEdge1";
+            this.safeSpaceLongEdge1.Size = new System.Drawing.Size(397, 25);
+            this.safeSpaceLongEdge1.TabIndex = 11;
+            this.safeSpaceLongEdge1.TabStop = false;
+            this.safeSpaceLongEdge1.Tag = "";
+            this.safeSpaceLongEdge1.Visible = false;
+            // 
+            // safeSpaceLongEdge3
+            // 
+            this.safeSpaceLongEdge3.BackColor = System.Drawing.Color.RosyBrown;
+            this.safeSpaceLongEdge3.Location = new System.Drawing.Point(319, 679);
+            this.safeSpaceLongEdge3.Margin = new System.Windows.Forms.Padding(2);
+            this.safeSpaceLongEdge3.Name = "safeSpaceLongEdge3";
+            this.safeSpaceLongEdge3.Size = new System.Drawing.Size(397, 25);
+            this.safeSpaceLongEdge3.TabIndex = 12;
+            this.safeSpaceLongEdge3.TabStop = false;
+            this.safeSpaceLongEdge3.Tag = "";
+            this.safeSpaceLongEdge3.Visible = false;
+            // 
+            // safeSpaceLongEdge4
+            // 
+            this.safeSpaceLongEdge4.BackColor = System.Drawing.Color.RosyBrown;
+            this.safeSpaceLongEdge4.Location = new System.Drawing.Point(319, 305);
+            this.safeSpaceLongEdge4.Margin = new System.Windows.Forms.Padding(2);
+            this.safeSpaceLongEdge4.Name = "safeSpaceLongEdge4";
+            this.safeSpaceLongEdge4.Size = new System.Drawing.Size(25, 399);
+            this.safeSpaceLongEdge4.TabIndex = 13;
+            this.safeSpaceLongEdge4.TabStop = false;
+            this.safeSpaceLongEdge4.Tag = "";
+            this.safeSpaceLongEdge4.Visible = false;
+            // 
+            // safeSpaceLongEdge2
+            // 
+            this.safeSpaceLongEdge2.BackColor = System.Drawing.Color.RosyBrown;
+            this.safeSpaceLongEdge2.Location = new System.Drawing.Point(691, 306);
+            this.safeSpaceLongEdge2.Margin = new System.Windows.Forms.Padding(2);
+            this.safeSpaceLongEdge2.Name = "safeSpaceLongEdge2";
+            this.safeSpaceLongEdge2.Size = new System.Drawing.Size(25, 398);
+            this.safeSpaceLongEdge2.TabIndex = 14;
+            this.safeSpaceLongEdge2.TabStop = false;
+            this.safeSpaceLongEdge2.Tag = "";
+            this.safeSpaceLongEdge2.Visible = false;
+            // 
+            // pictureBox77
+            // 
+            this.pictureBox77.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox77.Image = global::Snaccident_Dog_attempt_one_06_January_2025.Properties.Resources.dogSprite_GIF_256px_second_test_14_April_2025;
+            this.pictureBox77.Location = new System.Drawing.Point(982, 734);
+            this.pictureBox77.Name = "pictureBox77";
+            this.pictureBox77.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox77.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox77.TabIndex = 3;
+            this.pictureBox77.TabStop = false;
+            this.pictureBox77.Tag = "";
+            this.pictureBox77.Visible = false;
+            // 
+            // proposedPauseButton
+            // 
+            this.proposedPauseButton.BackColor = System.Drawing.Color.Transparent;
+            this.proposedPauseButton.Image = global::Snaccident_Dog_attempt_one_06_January_2025.Properties.Resources.Pause_button_100_per_cent_opacity_07_April_2025;
+            this.proposedPauseButton.Location = new System.Drawing.Point(70, 959);
+            this.proposedPauseButton.Name = "proposedPauseButton";
+            this.proposedPauseButton.Size = new System.Drawing.Size(40, 40);
+            this.proposedPauseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.proposedPauseButton.TabIndex = 3;
+            this.proposedPauseButton.TabStop = false;
+            this.proposedPauseButton.Tag = "";
+            this.proposedPauseButton.Visible = false;
+            this.proposedPauseButton.MouseHover += new System.EventHandler(this.PauseGameShowUpdates);
+            // 
+            // newFeaturesInfo
+            // 
+            this.newFeaturesInfo.AccessibleDescription = resources.GetString("newFeaturesInfo.AccessibleDescription");
+            this.newFeaturesInfo.AccessibleName = "How do I play?";
+            this.newFeaturesInfo.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.newFeaturesInfo.AutoSize = true;
+            this.newFeaturesInfo.BackColor = System.Drawing.Color.Transparent;
+            this.newFeaturesInfo.Font = new System.Drawing.Font("Comic Sans MS", 18F);
+            this.newFeaturesInfo.ForeColor = System.Drawing.Color.White;
+            this.newFeaturesInfo.Location = new System.Drawing.Point(116, 961);
+            this.newFeaturesInfo.Name = "newFeaturesInfo";
+            this.newFeaturesInfo.Size = new System.Drawing.Size(302, 33);
+            this.newFeaturesInfo.TabIndex = 1;
+            this.newFeaturesInfo.Text = "What is new in version 2?";
+            this.newFeaturesInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.newFeaturesInfo.Visible = false;
+            // 
+            // helpfulHint1
+            // 
+            this.helpfulHint1.BackColor = System.Drawing.Color.IndianRed;
+            this.helpfulHint1.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpfulHint1.ForeColor = System.Drawing.Color.Red;
+            this.helpfulHint1.Location = new System.Drawing.Point(342, 329);
+            this.helpfulHint1.Name = "helpfulHint1";
+            this.helpfulHint1.Size = new System.Drawing.Size(350, 351);
+            this.helpfulHint1.TabIndex = 15;
+            this.helpfulHint1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.helpfulHint1.Visible = false;
             // 
             // Form1
             // 
@@ -1284,10 +1570,22 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.RosyBrown;
             this.ClientSize = new System.Drawing.Size(1034, 1011);
-            this.Controls.Add(this.instructionsVisual);
+            this.Controls.Add(this.helpfulHint1);
             this.Controls.Add(this.gameInfoMessage);
-            this.Controls.Add(this.gameOverMessage);
+            this.Controls.Add(this.instructionsVisual);
             this.Controls.Add(this.replayPanel);
+            this.Controls.Add(this.dogSprite);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.newFeaturesInfo);
+            this.Controls.Add(this.gameOverMessage);
+            this.Controls.Add(this.safeSpaceShortEdge4);
+            this.Controls.Add(this.safeSpaceShortEdge3);
+            this.Controls.Add(this.safeSpaceShortEdge7);
+            this.Controls.Add(this.safeSpaceShortEdge8);
+            this.Controls.Add(this.safeSpaceShortEdge5);
+            this.Controls.Add(this.safeSpaceShortEdge2);
+            this.Controls.Add(this.safeSpaceShortEdge6);
+            this.Controls.Add(this.safeSpaceShortEdge1);
             this.Controls.Add(this.pictureBox43);
             this.Controls.Add(this.pictureBox31);
             this.Controls.Add(this.pictureBox33);
@@ -1295,6 +1593,7 @@
             this.Controls.Add(this.pictureBox32);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox42);
+            this.Controls.Add(this.pictureBox76);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox22);
             this.Controls.Add(this.pictureBox14);
@@ -1312,6 +1611,10 @@
             this.Controls.Add(this.pictureBox19);
             this.Controls.Add(this.pictureBox26);
             this.Controls.Add(this.pictureBox37);
+            this.Controls.Add(this.proposedPauseButton);
+            this.Controls.Add(this.pictureBox77);
+            this.Controls.Add(this.pictureBox75);
+            this.Controls.Add(this.pictureBox74);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox25);
             this.Controls.Add(this.pictureBox18);
@@ -1332,9 +1635,7 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.boundaryShapes);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox73);
-            this.Controls.Add(this.dogSprite);
             this.Controls.Add(this.pictureBox48);
             this.Controls.Add(this.pictureBox44);
             this.Controls.Add(this.pictureBox49);
@@ -1355,12 +1656,17 @@
             this.Controls.Add(this.pictureBox60);
             this.Controls.Add(this.pictureBox62);
             this.Controls.Add(this.pictureBox61);
+            this.Controls.Add(this.safeSpace);
+            this.Controls.Add(this.safeSpaceLongEdge1);
+            this.Controls.Add(this.safeSpaceLongEdge3);
+            this.Controls.Add(this.safeSpaceLongEdge4);
+            this.Controls.Add(this.safeSpaceLongEdge2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(1050, 1050);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Snaccident Dog v1";
+            this.Text = "Snaccident Dog v2";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsPressed);
             this.replayPanel.ResumeLayout(false);
             this.replayPanel.PerformLayout();
@@ -1442,7 +1748,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox62)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox61)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox74)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox75)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox76)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpace)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceShortEdge3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceLongEdge1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceLongEdge3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceLongEdge4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeSpaceLongEdge2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox77)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proposedPauseButton)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1532,10 +1857,30 @@
         private System.Windows.Forms.Label gameInstructions;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox73;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox instructionsVisual;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label gameInfoMessage;
+        private System.Windows.Forms.PictureBox pictureBox74;
+        private System.Windows.Forms.PictureBox pictureBox75;
+        private System.Windows.Forms.PictureBox pictureBox76;
+        private System.Windows.Forms.PictureBox safeSpace;
+        private System.Windows.Forms.Label versionNo;
+        private System.Windows.Forms.PictureBox safeSpaceShortEdge1;
+        private System.Windows.Forms.PictureBox safeSpaceShortEdge2;
+        private System.Windows.Forms.PictureBox safeSpaceShortEdge6;
+        private System.Windows.Forms.PictureBox safeSpaceShortEdge5;
+        private System.Windows.Forms.PictureBox safeSpaceShortEdge8;
+        private System.Windows.Forms.PictureBox safeSpaceShortEdge7;
+        private System.Windows.Forms.PictureBox safeSpaceShortEdge4;
+        private System.Windows.Forms.PictureBox safeSpaceShortEdge3;
+        private System.Windows.Forms.PictureBox safeSpaceLongEdge1;
+        private System.Windows.Forms.PictureBox safeSpaceLongEdge3;
+        private System.Windows.Forms.PictureBox safeSpaceLongEdge4;
+        private System.Windows.Forms.PictureBox safeSpaceLongEdge2;
+        private System.Windows.Forms.PictureBox pictureBox77;
+        private System.Windows.Forms.PictureBox proposedPauseButton;
+        private System.Windows.Forms.Label newFeaturesInfo;
+        private System.Windows.Forms.Label helpfulHint1;
     }
 }
 

@@ -9,6 +9,8 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Snaccident Dog (initial tes
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Snaccident Dog v1", "..\Snaccident Dog v1\Snaccident Dog v1.vdproj", "{CD749342-20FF-414E-9157-732CA4BAD2AF}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Snaccident Dog v2", "..\Snaccident Dog v2\Snaccident Dog v2.vdproj", "{1C54C14B-71A5-228A-2237-E0540651892C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,8 @@ Global
 		{8AB1ADB2-5009-4582-8846-B856CC4DB52A}.Release|Any CPU.ActiveCfg = Release
 		{CD749342-20FF-414E-9157-732CA4BAD2AF}.Debug|Any CPU.ActiveCfg = Debug
 		{CD749342-20FF-414E-9157-732CA4BAD2AF}.Release|Any CPU.ActiveCfg = Release
+		{1C54C14B-71A5-228A-2237-E0540651892C}.Debug|Any CPU.ActiveCfg = Debug
+		{1C54C14B-71A5-228A-2237-E0540651892C}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

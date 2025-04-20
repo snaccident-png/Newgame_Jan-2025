@@ -5,80 +5,64 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using System.Windows.Forms; // Added on 7th January 2025: This namespace thing will be needed.
+using System.Windows.Forms;
 
 namespace Snaccident_Dog_attempt_one_06_January_2025
 {
-    // Added on Monday, 6th January 2025.
-    // Timestamp in the tutorial video on YouTube: 16:03
+    // Added on Wednesday, 5th March 2025.
 
     /* 
-     * The Ghost class, or rather, the Enemy class, will be used by the main Form 1.cs class to 'spawn' or create multiple instances or copies of
-     * the same ghost independently and perhaps more easily than timing them using the game timer function.
+     * The Chocolate class will be used by the main Form 1.cs class and will 'spawn' or create one instances of the chocolate bar sprite; I have not yet started designing the proper and final pixel art for said sprite as at 10th March 2025.
      * 
-     * According to the tutorial video I am following, I may be able to assign different images to different copies of the Enemy class in the main Form1 class.
+     * I will try to figure out what to do myself as I did with figuring out how to add things to Nathan's Snake Game, the previous game I made and my first graphical C# game, and to version 1 of this game.
+     * 
+     * I expect myself to feel frustrated, confused, fed up, and determined to find a way to add working code to this class.
+     * 
+     * As at 10th March 2025, I managed to add the chocolate bar sprite to the game board from Form 1.cs as well as a suitable game over message which appears after the game ends.
+     * 
+     * Now on 10th March 2025, I will try to add working code that makes the chocolate bar sprite appear at a different spot on the game board every time the Replay button is clicked. The chocolate bar sprite will always change its spot and I am glad I made this clear.
+     * 
+     * I will start by using the Random feature and become increasingly frustrated from there.
+     * 
+     * As a reward for getting the code working as intended, I will look forward to spending a weekend designing the proper and final pixel art for the chocolate bar sprite. Good luck!
      */
 
     internal class Chocolate
     {
-        // Added on Tuesday, 7th January 2025.
-        // Timestamp in the tutorial video on YouTube: 48:25
-
-        // I assume this speed variable sets how slow or fast the enemy sprites will move.
-        //int speed = 12;
-
-        // When the enemy sprites go into 'seek' or 'attack' mode, these variables set a slower speed for the enemy sprites. I just imagined the dog sprite being chased by fast-moving enemy sprites hahaha! But I will control myself for now and follow the tutorial video.
-        //int xSpeed = /*3*/16;
-        //int ySpeed = /*3*/16;
-
         // These variables will determine the furthest positions at which the enemy sprites can go vertically and horizontally.
 
-        // These variables were completed after following the tutorial video at 55:18 (5:21pm AEDT).
-        int minHeight = 75 /*68*/; 
-        
-        // I belatedly realised why the guy in the tutorial video altered some of these values and altered some myself (10:17pm).
-        /*
-         * Wha-hey! With curiosity and my observation skills, I succeeded in stopping the enemy sprites from leaving the game board!
-         * 
-         * I used the x values for one boundary shape on the left and on the right, respectively, and used the y values for one boundary
-         * shape at the top and at the bottom, respectively, then added ten to the minimum values and subtracted ten from the maximum 
-         * values and hey presto things worked out.
-         */
+        // These variables were completed after following the tutorial video by Moo ICT at 55:18 (5:21pm AEDT).
+        public int minHeight = 75 /*68*/;
+        public int maxHeight = 917 /*693*/;
 
-        int maxHeight = 917 /*693*/;
-
-        int minWidth = 72 /*63*/;
-        int maxWidth = 944 /*894*/;
-
-        // Notes for minimum and maximum height values: 135 (min) and 1012 (max).
-        // Notes for minimum and maximum width values: 124 (min) and 1288 (max).
+        public int minWidth = 72 /*63*/;
+        public int maxWidth = 944 /*894*/;
 
 
 
-        // Changes to height and width values on Thursday, 23rd January 2025.
-        // Notes for minimum and maximum height values: 135 (min) and 1012 (max).
-        // Notes for minimum and maximum width values: 124 (min) and 1288 (max).
-
-
+        // Commented out sometime between February and March 2025.
+        // Reintroduced on Sunday, 30th March 2025.
 
         // This variable will do something. This variable will generate a random number which the game will reduce to zero and then change to a different value. In my own words, int change will cause all of the enemy variables to move in random directions when they enter 'seek' mode... I think?
-        // int change;
+        //int change;
         Random random = new Random();
 
+        int change;
+
         // A string array (yay!) will define the directions the player can move towards. Then, a single string variable will contain the default direction in which the player will move.
-        //string[] directions = { "left", "right", "up", "down", "seek" }; // The tutorial video said to work up to seek.
-        //string direction = "left";
+        string[] directions = { "left", "right", "up", "down" };
+        string direction = "left";
 
         // I think this new picture-box will show the custom image files for the enemy sprites?
         public PictureBox img = new PictureBox();
-
-
+        
+        // Nope.
+        //private Form1 form1;
+        //private object x;
+        //private object y;
 
         public Chocolate(Form game, Image Choco, int x, int y)
         {
-            // Added on Tuesday, 7th January 2025.
-            // Timestamp in the tutorial video on YouTube: 52:37
-
             // The settings for the enemy sprites will be specified here.
             // The main class file (Form1) will be referenced in this Ghost function in order to allow me to add this Ghost function from the Ghost class file to Form1.
 
@@ -86,11 +70,13 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
             img.Image = Choco;
 
             // Specify how the image will be shown in the game (like specifying the same setting from the Properties panel on the right-hand-side.)
-            img.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            // Updated on Saturday, 5th April 2025.
+            img.SizeMode = PictureBoxSizeMode.AutoSize/*StretchImage*/;
 
             // Specify how wide or narrow and tall or short the image will be in the game.
-            img.Width = 75;
-            img.Height = 75;
+            //img.Width = 85;
+            //img.Height = 85;
 
             // Specify where or what x and y are in the game.
             img.Left = x;
@@ -98,6 +84,13 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
 
             game.Controls.Add(img);
         }
+
+        //public Chocolate(Form1 form1, object x, object y)
+        //{
+        //    this.form1 = form1;
+        //    this.x = x;
+        //    this.y = y;
+        //}
 
         //public void EnemyMovement(PictureBox dogSprite) // Updated picture-box name from dogSpriteAgain to dogSprite on 8th January 2025. The enemy sprites seem to be more interested in the whereabouts of the dog sprite.
         //{
@@ -195,21 +188,38 @@ namespace Snaccident_Dog_attempt_one_06_January_2025
         //    }
         //}
 
-        //public void ChangeDirection()
-        //{
-        //    // Added on Tuesday, 7th January 2025.
-        //    // Timestamp in the tutorial video on YouTube: 01:17:00
+        public void ChangeDirection()
+        {
+            // Added on Tuesday, 7th January 2025.
+            // Timestamp in the tutorial video on YouTube: 01:17:00
 
-        //    /* 
-        //     * The guy in the tutorial video wanted his ghost sprites to change their direction when a game ends.
-        //     * 
-        //     * In my game, the enemy sprites will change their direction when a game ends.
-        //     * 
-        //     * The code is apparently as quick and simple as copying and pasting an existing line of code from the EnemyMovement() function.
-        //     */
+            /* 
+             * The guy in the tutorial video wanted his ghost sprites to change their direction when a game ends.
+             * 
+             * In my game, the enemy sprites will change their direction when a game ends.
+             * 
+             * The code is apparently as quick and simple as copying and pasting an existing line of code from the EnemyMovement() function.
+             */
 
-        //    direction = directions[random.Next(directions.Length)];
-        //}
+            if (change > 0)
+            {
+                change--;
+            }
+
+
+
+            //// However, when the enemy sprites have closed in on the dog sprite, the enemy sprites will change direction randomly and move away from the dog sprite.
+            else
+            {
+                change = random.Next(50, 100);
+                direction = directions[random.Next(directions.Length)];
+            }
+
+            direction = directions[random.Next(directions.Length)];
+
+            //X = 0;
+            //Y = 0;
+        }
 
 
     }
